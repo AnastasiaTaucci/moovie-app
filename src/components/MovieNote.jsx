@@ -39,7 +39,7 @@ const MovieNote = ({ movie, userId }) => {
     };
 
     return (
-        <div onClick={(e) => e.stopPropagation()}>
+        <div className="movie-note" onClick={(e) => e.stopPropagation()}>
             <label htmlFor="movie-note">My Note:</label>
             <textarea
                 id="movie-note"

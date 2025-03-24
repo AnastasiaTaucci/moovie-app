@@ -148,36 +148,6 @@ h1 a {
   box-sizing: border-box;
 }
 
-.movie-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  max-height: 300px;                  /* limit the height of the list */
-  overflow-y: auto;                   /* so that there's a scrollbar when the list is too long (based on max-height)*/
-  cursor: pointer;
-}
-
-.movie-item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 15px;
-  border-bottom: 1px solid #eee;    /* line to separate each movie */
-  padding-bottom: 15px;
-}
-
-.movie-item img {
-  width: 100px;
-  height: 150px;
-  object-fit: cover;
-  margin-right: 15px;
-  border-radius: 4px;
-}
-
-.movie-item span {
-  font-size: 1.1em;
-  color: #333;
-}
-
 /* ------------------- Login/Register styles --------------------- */
 .input-container {
   display: flex;
@@ -222,15 +192,97 @@ h1 a {
 
 
 /* ------------------- MovieList --------------------- */
-.rewatching-label {
-  color: orange;
-  font-weight: 700; 
+.movie-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 300px;                  /* limit the height of the list */
+  overflow-y: auto;                   /* so that there's a scrollbar when the list is too long (based on max-height)*/
+  cursor: pointer;
 }
 
-.note {
-  font-size: 0.9em; 
-  color: grey
+.movie-item {
+  margin-bottom: 15px;
+  border-bottom: 1px solid #eee;    /* line to separate each movie */
+  padding-bottom: 15px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* 5 equal columns */
+  grid-template-rows: repeat(5, auto);   /* 4 equal rows */
+  gap: 10px;
+  padding: 12px;
 }
+
+.movie-poster {
+  grid-column: 1 / 3;  /* columns 1 to 2 */
+  grid-row: 1 / 6;     /* rows 1 to 5 */
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin-right: 15px;
+  border-radius: 4px;
+}
+
+.movie-title {
+  grid-column: 3 / 7; /* columns 3 - 6 */
+  grid-row: 1;
+  font-weight: bold;
+  font-size: 1.7em;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.movie-year {
+  grid-column: 3 ;     
+  grid-row: 2;
+  font-size: 1.1em;
+  font-weight: 700;
+}
+
+.rewatching-label {
+  grid-column: 6;   
+  grid-row: 2;
+  font-size: 1.1em;
+  font-weight: 700;
+  color: orange; 
+}
+
+.movie-rating {
+  grid-column: 5 / 7;     /* columns 5 - 6 */
+  grid-row: 3;
+  font-size: 1.1em;
+  color: #ddd;
+}
+
+.movie-note {
+  grid-column: 3 / 7; /* columns 3 to 5 */
+  grid-row: 4;
+  font-size: 0.9em; 
+  color: grey;
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+}
+
+.movie-button-1 {
+  grid-column: 3 ;
+  grid-row: 5;
+}
+
+.movie-button-2 {
+  grid-column: 5;
+  grid-row: 5;
+}
+
+.movie-note button {
+  width: 100px;
+}
+
+.slider {
+  display: flex;
+}
+
+
+
 
 /* ------------------- MovieCard --------------------- */
 .movie-card img {

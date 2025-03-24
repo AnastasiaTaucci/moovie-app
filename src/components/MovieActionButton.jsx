@@ -146,37 +146,37 @@ export default function MovieActionButton({ movie, movies, setMoviesFirebase, cl
     }
 
     return (
-        <div>
+        <>
             {location.pathname === "/" && (
                 <>  
-                    <button className='add-btn' onClick={ (e) => addMovie(e, "watchlist")}>
+                    <button className='movie-button-1' onClick={ (e) => addMovie(e, "watchlist")}>
                         Watchlist
                     </button>
-                    <button className='add-btn' onClick={ (e) => addMovie(e, "watched")}>
+                    <button className='movie-button-2' onClick={ (e) => addMovie(e, "watched")}>
                         Watched
                     </button>
                 </> 
             )}
             {location.pathname.includes("watchlist") && (
                 <>  
-                    <button className='add-btn' onClick={ (e) => moveToWatched(e, movie)}>
+                    <button className='movie-button-1' onClick={ (e) => moveToWatched(e, movie)}>
                         Watched
                     </button>
-                    <button className='add-btn' onClick={ (e) => removeMovie(e, "watchlist", movie.id)}>
+                    <button className='movie-button-2' onClick={ (e) => removeMovie(e, "watchlist", movie.id)}>
                         Remove
                     </button>
                 </> 
             )}
             {location.pathname.includes("watched") && (
                 <>  
-                    <button className='add-btn' onClick={ (e) => moveToWatchlist(e, movie)}>
+                    <button className='movie-button-1' onClick={ (e) => moveToWatchlist(e, movie)}>
                         Rewatch
                     </button>
-                    <button className='add-btn' onClick={ (e) => removeMovie(e, "watched", movie.id)}>
+                    <button className='movie-button-2' onClick={ (e) => removeMovie(e, "watched", movie.id)}>
                         Remove
                     </button>
                 </> 
             )}
-        </div>
+        </>
     )
 }

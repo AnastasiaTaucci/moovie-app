@@ -33,19 +33,22 @@ const StarRating = ({ movie, userId }) => {
     };
 
     return (
-        <div onClick={(e) => e.stopPropagation()}>
+        <div className="movie-rating" onClick={(e) => e.stopPropagation()}>
             <label htmlFor="rating-slider">Your Rating:</label>
-            <input 
-                type="range"
-                id="rating-slider" 
-                min="0" 
-                max="5" 
-                step="0.5" 
-                value={rating === "Not rated yet" ? 0 : rating} 
-                onChange={handleRatingChange}
-                aria-labelledby="rating-label"
-            />
-            <span>{rating} ★</span>
+            <div className="slider">
+                <input 
+                    type="range"
+                    id="rating-slider" 
+                    min="0" 
+                    max="5" 
+                    step="0.5" 
+                    value={rating === "Not rated yet" ? 0 : rating} 
+                    onChange={handleRatingChange}
+                    aria-labelledby="rating-label"
+                />
+                <span>★ {rating}</span>
+            </div>
+
         </div>
     );
 };
