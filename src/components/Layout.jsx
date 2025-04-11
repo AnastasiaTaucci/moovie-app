@@ -118,7 +118,7 @@ export default function Layout() {
                 <Outlet />
             </main>
             <footer role="contentinfo">
-                <p>Built by two movie lovers, for movie lovers! &copy; 2025 Movie Track.</p>
+                <p>Built by two movie lovers, for movie lovers! &copy; 2025 Moovie Track.</p>
             </footer>   
             <MusicPlayer src="/bg-music.mp3" />        
         </>
