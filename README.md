@@ -1,7 +1,8 @@
 # Moovie Track  
 
 ## Overview  
-Moovie Track is a simple movie tracking app that allows users to search, save, add notes, and rate movies. The app is built using **React** ,**Firebase** and **Vite**.  
+Moovie Track is a movie-tracking web application built with React, Vite, Firebase, and The Movie Database (TMDB) API.
+The app allows users to browse movies without logging in. Registered users can save movies to their watchlist, mark movies as watched, add ratings, and write personal notes.  
 
 ## Live Demo
 
@@ -11,10 +12,27 @@ Try the app here: (https://moovietrack.netlify.app/)
 ---
 
 ### Features  
-- Search movies using **The Movie Database (TMDB) API**.  
-- Support for **Firebase Authentication** (email sign-in).  
-- Save user data, including watchlist, ratings, and notes, using **Firestore Database**.
-- Built with **React** + **Vite** for fast loading 
+- Search movies using The Movie Database (TMDB) API
+- Browse movie information without logging in
+- Sign up and log in with Firebase Authentication
+- Save movies to a personal watchlist
+- Mark movies as watched
+- Add ratings and personal notes
+- Store user-specific data using Firestore
+- Protect saved data so each user can access only their own movies
+- Deployed with Netlify
+
+## Tech Stack
+
+- React
+- Vite
+- Firebase Authentication
+- Firestore
+- TMDB API
+- Netlify
+- HTML
+- CSS
+- JavaScript
 
 ## Getting Started  
 
